@@ -31,8 +31,7 @@ class Customer
   def self.all()
     sql = "SELECT * FROM customers"
     customers = SqlRunner.run(sql, [])
-    result = customers.map {|customer_hash| Customer.new(customer_hash)}
-    return result
+    return customers.map {|customer_hash| Customer.new(customer_hash)}
   end
 
   def self.delete_all()
@@ -41,7 +40,8 @@ class Customer
   end
 
   def update()
-    sql = "UPDATE customers SET (
+    sql = "UPDATE customers SET
+    (
       name,
       cash
     ) =
