@@ -5,17 +5,17 @@ DROP TABLE films;
 CREATE TABLE customers (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
-  cash FLOAT
+  cash INT
 );
 
 CREATE TABLE films (
   id SERIAL PRIMARY KEY,
   title VARCHAR(255),
-  price FLOAT
+  price INT
 );
 
 CREATE TABLE tickets (
   id SERIAL PRIMARY KEY,
-  customer_id INT REFERENCES customers(id),
-  film_id INT REFERENCES films(id)
+  customer_id INT REFERENCES customers(id) ON DELETE CASCADE,
+  film_id INT REFERENCES films(id) ON DELETE CASCADE
 );
