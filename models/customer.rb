@@ -81,4 +81,10 @@ class Customer
   end
   # pretty much copied from an example, don't really understan the last line.
 
+  def buy_ticket()
+
+  end
+  # this should reduce customer funds by the film.price. should it also save a
+  # new ticket - how would thwt work? would I have to pass in a film?
+
 end
