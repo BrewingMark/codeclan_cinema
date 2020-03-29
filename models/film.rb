@@ -70,4 +70,14 @@ class Film
     return customers.map {|customer| Customer.new(customer)}
   end
 
+  def total_customers()
+    sql = "SELECT count(*) FROM tickets
+          INNER JOIN films
+          ON films.id = tickets.film_id
+          WHERE films.id = $1"
+    values = [@id]
+    total = SqlRunner.run(sql, values)
+    return total[0]['count'].to_i
+  end
+
 end

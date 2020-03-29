@@ -79,5 +79,6 @@ class Customer
     total = SqlRunner.run(sql, values)
     return total[0]['count'].to_i()
   end
+  # pretty much copied from an example, don't really understan the last line.
 
 end
