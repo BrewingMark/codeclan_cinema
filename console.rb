@@ -8,9 +8,9 @@ Customer.delete_all()
 Film.delete_all()
 
 
-customer1 = Customer.new({'name' => 'Joe Blogs', 'cash' => 120.00})
+customer1 = Customer.new({'name' => 'Joe Blogs', 'cash' => 120})
 customer1.save()
-customer2 = Customer.new({'name' => 'Steve Smith', 'cash' => 100.00})
+customer2 = Customer.new({'name' => 'Steve Smith', 'cash' => 100})
 customer2.save()
 
 film1 = Film.new({'title' => 'The Matrix', 'price' => 10})

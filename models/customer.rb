@@ -8,7 +8,7 @@ class Customer
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
-    @cash = options['cash'].to_f
+    @cash = options['cash'].to_i
   end
 
   def save()
